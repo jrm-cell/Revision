@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEJM - Révisions BTS SIO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .modal-content h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #1abc9c;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .item-revision {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 3px solid #eee;
+            font-size: 0.95rem;
+        }
+        .item-revision strong {
+            color: #2980b9;
+        }
+        .auteur-block {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 5px solid #9b59b6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CEJM</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="cejm.html">CEJM</a>
+    <a href="culture-generale.html">Culture G</a>
+    <a href="anglais.html">Anglais</a>
+    <a href="b3.html">B3</a>
+</nav>
+
+<div class="container">
+    <button class="btn-cours" onclick="openModal('modalNotions')" style="background-color: #3498db;"> NOTIONS</button>
+    <button class="btn-cours" onclick="openModal('modalAuteurs')" style="background-color: #9b59b6;"> AUTEURS</button>
+    <button class="btn-cours" onclick="openModal('modalLexique')" style="background-color: #e67e22;"> LEXIQUE</button>
+    <button class="btn-cours" onclick="openModal('modalMethodePestel')" style="background-color: #27ae60;"> MÉTHODE : FAIRE UN PESTEL</button>
+
+    <div id="modalNotions" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalNotions')">&times;</span>
+            <h2>Notions</h2>
+            
+            <div class="item-revision"><strong>Les barrières à l’entrée sur un marché :</strong> Obstacles qui empêchent une nouvelle entreprise de s’implanter (coût, réglementation, brevet...)</div>
+            <div class="item-revision"><strong>Les externalités :</strong> Effets indirects d’une activité sur d’autres acteurs (positifs ou négatifs).</div>
+            
+            <h3>L’encadrement des phases de la négociation :</h3>
+            <div class="item-revision"> <strong>Bonne foi :</strong> Agir avec honnêteté dans la négociation.</div>
+            <div class="item-revision"> <strong>Obligation d’information :</strong> Fournir des infos essentielles à l’autre partie.</div>
+            <div class="item-revision"> <strong>Obligation de confidentialité :</strong> Ne pas divulguer d’informations sensibles.</div>
+
+            <h3>Les clauses spécifiques dans un contrat :</h3>
+            <div class="item-revision"> <strong>Clause de réserve de propriété :</strong> Le vendeur garde la propriété du bien jusqu’au paiement total.</div>
+            <div class="item-revision"><strong>Clause de limitation/exonération de responsabilité :</strong> Réduit la responsabilité d’une partie en cas de problème.</div>
+            <div class="item-revision"><strong>Clause d’indexation :</strong> Ajuste les prix selon un indice (ex : inflation).</div>
+            <div class="item-revision"><strong>Clause résolutoire :</strong> Annule le contrat en cas de non-respect des engagements.</div>
+            <div class="item-revision"><strong>Clause pénale :</strong> Prévient une sanction financière en cas de non-respect du contrat.</div>
+            <div class="item-revision"><strong>Le contrat :</strong> Accord juridiquement contraignant entre deux parties.</div>
+
+            <h3>Les conditions pour engager la responsabilité contractuelle :</h3>
+            <div class="item-revision"><strong>Fait générateur :</strong> L’événement qui cause le dommage.</div>
+            <div class="item-revision"> <strong>Dommage (préjudice) :</strong> Perte ou préjudice subi.</div>
+            <div class="item-revision"> <strong>Lien de causalité :</strong> Relation directe entre le fait et le dommage.</div>
+
+            <div class="item-revision"><strong>Facteur travail :</strong> Ressources humaines utilisées dans la production.</div>
+            <div class="item-revision"><strong>Facteur capital :</strong> Matériel et infrastructures nécessaires à la production.</div>
+
+            <h3>Droit de la concurrence :</h3>
+            <div class="item-revision"><strong>Droit de la concurrence :</strong> Régulation pour garantir une concurrence équitable.</div>
+            <div class="item-revision"> <strong>Concurrence déloyale :</strong> Pratiques frauduleuses entre entreprises.</div>
+            <div class="item-revision"> <strong>Dénigrement :</strong> Critiquer un concurrent de manière injustifiée.</div>
+            <div class="item-revision"><strong>Désorganisation :</strong> Nuire au fonctionnement d’un concurrent.</div>
+            <div class="item-revision"> <strong>Imitation :</strong> Copier un produit ou une marque.</div>
+            <div class="item-revision"> <strong>Parasitisme :</strong> Profiter de la notoriété d’un concurrent sans effort.</div>
+            <div class="item-revision"><strong>Propriété industrielle :</strong> Protection des inventions et marques.</div>
+            <div class="item-revision"><strong>Brevet :</strong> Protection d’une invention.</div>
+            <div class="item-revision"> <strong>Marque :</strong> Signe distinctif d’une entreprise.</div>
+
+            <div class="item-revision"> <strong>Outil PESTEL :</strong> Analyse de l’environnement d’une entreprise (Politique, Économique, Social, Technologique, Environnemental, Légal).</div>
+            <div class="item-revision"> <strong>Rupture conventionnelle :</strong> Accord entre employeur et salarié pour mettre fin au contrat.</div>
+        </div>
+    </div>
+
+    <div id="modalAuteurs" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalAuteurs')">&times;</span>
+            <h2>Auteurs</h2>
+
+            <div class="auteur-block">
+                <strong>Schumpeter</strong><br>
+                Un entrepreneur est un innovateur qui a le gout de la prise de risque. Il s'agit d'un « être exceptionnel » avec des qualités rares.<br>
+                <em>L’innovation :</em> Le moteur du système, c’est l’innovation et le progrès technique à travers le phénomène de « destruction créatrice ».<br>
+                Joseph SCHUMPETER distingue à ce titre 5 formes d’innovations : l'innovation de produits ; l'innovation de procédés ; l'innovation de modes de production ; l'innovation de débouchés ; l’innovation de matières premières.
+            </div>
+
+            <div class="auteur-block">
+                <strong>Likert</strong><br>
+                Rensis LIKERT (1903-1980) a établi au cours de ses recherches qu’il existait 4 styles de management : Management autoritaire ; Management consultatif ; Management paternaliste ; Management participatif.
+            </div>
+
+            <div class="auteur-block">
+                <strong>Hamel et Prahalad</strong><br>
+                Compétences distinctives : pour ses auteurs, les compétences distinctives permettent d’accéder à une plus grande variété de marchés ; elles contribuent de manière significative à la création de valeur pour le client et elles sont difficilement imitables par les concurrents.
+            </div>
+
+            <div class="auteur-block">
+                <strong>Freeman</strong><br>
+                La notion de parties prenantes a été définie en 1984 par E. FREEMAN. Elle désigne « les individus ou groupes d’individus qui peuvent influencer ou être influencés par les résultats de l’organisation. »
+            </div>
+        </div>
+    </div>
+
+    <div id="modalLexique" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalLexique')">&times;</span>
+            <h2>Lexique</h2>
+            <div class="item-revision"><strong>B to B :</strong> La relation Business to Business, ou interentreprises, s'adresse aux professionnels entre eux.</div>
+            <div class="item-revision"><strong>B to C :</strong> Cette relation d’échange consacre la relation entre entreprises et consommateurs (individus).</div>
+            <div class="item-revision"><strong>B to G :</strong> Cette expression anglo-saxonne désigne les relations entre une entreprise et une administration publique.</div>
+            <div class="item-revision"><strong>Avantage concurrentiel :</strong> Compétence « remarquable » qui améliore la position concurrentielle de l’entreprise et se traduit souvent par des performances commerciales et économiques supérieures à celle de ses concurrents.</div>
+            <div class="item-revision"><strong>Barrières à l'entrée :</strong> Ensemble des obstacles naturels et artificiels qui rendent très difficile l’entrée de nouvelles entreprises sur un marché.</div>
+            <div class="item-revision"><strong>Brevet :</strong> Le brevet protège une innovation technique, c'est-à-dire un produit ou un procédé qui apporte une solution technique à un problème technique donné.</div>
+            <div class="item-revision"><strong>Business plan :</strong> Le business plan est un document qui décrit la stratégie financière et commerciale de l'entreprise choisie pour mener à bien un projet entrepreneurial.</div>
+            <div class="item-revision"><strong>C to C :</strong> Il s’agit des échanges de biens et de services effectués directement entre deux ou plusieurs consommateurs.</div>
+            <div class="item-revision"><strong>CNIL :</strong> La CNIL s’adresse aux particuliers et aux professionnels et concerne le domaine de l’informatique et des libertés au sens large du terme.</div>
+            <div class="item-revision"><strong>Comité Social et Économique :</strong> Le comité social et économique (CSE) remplace les représentants élus du personnel dans l'entreprise. Il fusionne l'ensemble des instances représentatives du personnel (IRP), délégués du personnel (DP), comité d'entreprise (CE) et comité d'hygiène, de sécurité et des conditions de travail (CHSCT).</div>
+            <div class="item-revision"><strong>Concurrence :</strong> La concurrence est la compétition entre entreprises pour vendre les produits ou services similaires ou proches.</div>
+            <div class="item-revision"><strong>Concurrence déloyale :</strong> La concurrence déloyale correspond à l'usage de pratiques commerciales abusives par rapport à la concurrence.</div>
+            <div class="item-revision"><strong>Développement durable :</strong> Le développement durable est le développement qui répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs.</div>
+            <div class="item-revision"><strong>Externalisation :</strong> L’externalisation est une stratégie qui consiste pour une entreprise à confier certaines de ses activités à d’autres entreprises. La logique n’est plus celle de faire soi-même mais de faire faire (franchise, sous-traitance...).</div>
+            <div class="item-revision"><strong>Entrepreneur :</strong> L'entrepreneur, est celui qui, au sens de J. Schumpeter prend des risques, innove, saisit les opportunités d'affaires pour pérenniser l'entreprise.</div>
+            <div class="item-revision"><strong>E-reputation :</strong> L’e-réputation peut être définie comme l’image véhiculée et/ou subie par une entreprise ou une marque sur Internet et autres supports numérique.</div>
+            <div class="item-revision"><strong>Macro-environnement :</strong> Le macro-environnement représente les facteurs extérieurs à l'entreprise mis en évidence par le modèle PESTEL que l'entreprise subit sans pouvoir les influencer.</div>
+            <div class="item-revision"><strong>Méthode PESTEL :</strong> PESTEL est l'acronyme des différents domaines de l'environnement à étudier : P comme Politique, E comme Économique, S comme Socioculturel, T comme Technologique et L comme Légal. Cette méthode est utilisée pour analyser le macro-environnement de l'entreprise et constitue un outil d'aide à la décision.</div>
+            <div class="item-revision"><strong>Parties prenantes internes/externes :</strong> Cette classification des parties prenantes permet de distinguer celles qui sont à l'intérieur de l'entreprise (dirigeants, salariés, actionnaires, représentants du personnel) et celles qui sont à l'extérieur de l'entreprise (clients, fournisseurs, associations/ONG, banques, administrations, syndicats).</div>
+            <div class="item-revision"><strong>Parties prenantes primaires/secondaires :</strong> Cette classification des parties prenantes de l'entreprise permet de distinguer celles qui sont primordiales à la survie de l'entreprise (dirigeants, actionnaires, salariés, clients, fournisseurs) de celles qui ne le sont pas (banques, associations/ONG, administrations, syndicats).</div>
+            <div class="item-revision"><strong>Partie prenante :</strong> Une partie prenante est un individu ou groupe d'individus en relation avec l'entreprise qui peut affecter ses décisions ou être affectée par elle.</div>
+            <div class="item-revision"><strong>Ressources tangibles/intangibles :</strong> Les ressources sont des actifs spécifiques à l’entreprise. Elles peuvent être tangibles (actifs physiques observables) ou intangibles (actifs immatériels moins visibles) selon E. PENROSE.</div>
+            <div class="item-revision"><strong>RSE :</strong> LA RSE est, selon la Commission Européenne, « un concept qui désigne l'intégration volontaire, par les entreprises, de préoccupations sociales, environnementales et économiques à leurs activités commerciales et leurs relations avec les parties prenantes ».</div>
+        </div>
+    </div>
+
+</div>
+<div id="modalMethodePestel" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalMethodePestel')">&times;</span>
+            <h2>Méthode : Réaliser une analyse PESTEL</h2>
+            
+            <div class="item-revision">
+                <h3>Étape 1 : Collecte d'informations (Le Scan)</h3>
+                <p>Lister les faits marquants pour chaque pilier :</p>
+                <ul>
+                    <li><strong>P (Politique) :</strong> Stabilité, fiscalité.</li>
+                    <li><strong>E (Économique) :</strong> Inflation, chômage, pouvoir d'achat.</li>
+                    <li><strong>S (Sociologique) :</strong> Modes de consommation, démographie.</li>
+                    <li><strong>T (Technologique) :</strong> IA, innovations, R&D.</li>
+                    <li><strong>E (Écologique) :</strong> Lois environnementales, climat.</li>
+                    <li><strong>L (Légal) :</strong> Droit du travail, RGPD.</li>
+                </ul>
+            </div>
+
+            <div class="item-revision">
+                <h3>Étape 2 : Analyse de l'impact</h3>
+                <p>Pour chaque facteur, définir :</p>
+                <ul>
+                    <li>Le sens : <strong>Opportunité (+)</strong> ou <strong>Menace (-)</strong>.</li>
+                    <li>La force : Impact faible, moyen ou fort.</li>
+                </ul>
+            </div>
+
+            <div class="item-revision">
+                <h3>Étape 3 : Durée de l'impact</h3>
+                <p>Classer par temporalité : Court terme (&lt; 1 an), Moyen terme (1-3 ans) ou Long terme.</p>
+            </div>
+
+            <div class="item-revision">
+                <h3>Étape 4 : Identifier les variables pivots</h3>
+                <p>Isoler les facteurs qui vont radicalement modifier l'avenir du secteur (ex: une nouvelle loi majeure ou une rupture technologique).</p>
+            </div>
+
+            <div class="item-revision">
+                <h3>Étape 5 : Synthèse et Décision</h3>
+                <p>Conclure sur les dangers prioritaires à éviter et les opportunités à saisir.</p>
+            </div>
+            
+            <p style="background:#f1f2f6; padding:10px; border-radius:5px; font-style:italic;">
+                💡 <strong>Conseil examen :</strong> Ne fais pas juste une liste, explique pourquoi le facteur influence l'entreprise (ex: "Le RGPD est une menace car il nécessite un investissement de mise en conformité").
+            </p>
+        </div>
+    </div>
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+    window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+</script>
+
+</body>
+</html>

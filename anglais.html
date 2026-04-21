@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglais - Révisions BTS SIO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles pour l'organisation interne des pop-ups */
+        .modal-content h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #d35400;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .item-revision {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #eee;
+            font-size: 0.95rem;
+        }
+        .item-revision strong {
+            color: #d35400;
+        }
+        .tip-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .example-box {
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #d35400;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ANGLAIS</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="cejm.html">CEJM</a>
+    <a href="anglais.html">Anglais</a>
+    <a href="b3.html">B3</a>
+</nav>
+
+<div class="container">
+    <button class="btn-cours" onclick="openModal('modalEmail')" style="background-color: #d35400;"> RÉDIGER UN E-MAIL</button>
+    <button class="btn-cours" onclick="openModal('modalAttention')" style="background-color: #c0392b;">⚠️ ATTENTION : NE PAS OUBLIER</button>
+    <button class="btn-cours" onclick="openModal('modalVocab')" style="background-color: #2980b9;"> VOCABULAIRE UTILE</button>
+
+    <div id="modalEmail" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalEmail')">&times;</span>
+            <h2>Structure & Phrases Clés</h2>
+
+            <h3>1. Salutations (Greetings)</h3>
+            <div class="item-revision"><strong>Formel :</strong> Dear Mr/Ms Smith, / Dear Sir or Madam,</div>
+            <div class="item-revision"><strong>Standard :</strong> Dear John, / Hello Everyone,</div>
+
+            <h3>2. Objet (Opening lines)</h3>
+            <div class="item-revision"><strong>Standard :</strong> I am writing you about... / I am writing to you regarding...</div>
+            <div class="item-revision"><strong>Information :</strong> I am writing to inform you that...</div>
+            <div class="item-revision"><strong>Suite à un échange :</strong> Following our meeting... / Further to our phone call...</div>
+
+            <h3>3. Demande & Pièces jointes</h3>
+            <div class="item-revision"><strong>Demande :</strong> Could you please send me...? / I would be grateful if you could...</div>
+            <div class="item-revision"><strong>Fichiers :</strong> Please find attached the document... / I have attached the file...</div>
+
+            <h3>4. Clôture & Politesse</h3>
+            <div class="item-revision"><strong>Attente :</strong> I look forward to hearing from you.</div>
+            <div class="item-revision"><strong>Aide :</strong> If you have any questions, please feel free to contact me.</div>
+            <div class="item-revision"><strong>Signature :</strong> Best regards, / Kind regards,</div>
+
+            <h3>Exemple Professionnel</h3>
+            <div class="example-box">
+                <strong>Subject:</strong> Invitation to the Workshop<br><br>
+                Dear Delphine,<br><br>
+                I hope this email finds you well.<br><br>
+                I am writing you about the cybersecurity workshop that will take place in our office next Thursday at 2 PM.<br><br>
+                It would be a pleasure to have you among us. Please let me know if you are available to attend.<br><br>
+                I look forward to hearing from you soon.<br><br>
+                Best regards,<br>
+                (La tu signe en fonction de ton RP , Jimmyyyyyyyyyyyyy)
+            </div>
+        </div>
+    </div>
+
+    <div id="modalAttention" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalAttention')">&times;</span>
+            <h2>Points de vigilance</h2>
+            
+            <div class="tip-box" style="border: 2px solid #c0392b; background: #fdeaea;">
+                <strong>🚫 AVIS PERSONNEL :</strong> Il est strictement interdit de donner son avis personnel ("I think", "In my opinion") SAUF si la consigne le demande explicitement.
+            </div>
+
+            <div class="tip-box">
+                <strong>Nombre de mots :</strong> Respecte scrupuleusement la consigne (ex: 150 mots). Note le total à la fin.
+            </div>
+
+            <div class="tip-box">
+                <strong> Majuscules :</strong> Jours (Monday), Mois (April), Nationalités et "I" (je) prennent TOUJOURS une majuscule.
+            </div>
+
+            <div class="tip-box">
+                <strong>↔Mise en page :</strong> Saute des lignes entre l'objet, la salutation, les paragraphes et la signature finale.
+            </div>
+        </div>
+    </div>
+
+    <div id="modalVocab" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalVocab')">&times;</span>
+            <h2>Vocabulaire</h2>
+            
+            <h3> IT & Business</h3>
+            <div class="item-revision"><strong>To solve a problem :</strong> Résoudre un problème.</div>
+            <div class="item-revision"><strong>A framework :</strong> Un cadre de travail.</div>
+            <div class="item-revision"><strong>Software / Hardware :</strong> Logiciel / Matériel.</div>
+            <div class="item-revision"><strong>Cybersecurity threats :</strong> Menaces de cybersécurité.</div>
+
+            <h3> Environment</h3>
+            <div class="item-revision"><strong>Global warming :</strong> Le réchauffement climatique.</div>
+            <div class="item-revision"><strong>Carbon footprint :</strong> L'empreinte carbone.</div>
+            <div class="item-revision"><strong>Eco-friendly :</strong> Respectueux de l'environnement.</div>
+            <div class="item-revision"><strong>Energy consumption :</strong> Consommation d'énergie.</div>
+
+            <h3> Jobs</h3>
+            <div class="item-revision"><strong>System Administrator :</strong> Administrateur système.</div>
+            <div class="item-revision"><strong>Web Developer :</strong> Développeur web.</div>
+            <div class="item-revision"><strong>Cybersecurity Analyst :</strong> Analyste en cybersécurité.</div>
+            <div class="item-revision"><strong>Internship / Trainee :</strong> Un stage / Un stagiaire.</div>
+            <div class="item-revision"><strong>Skills :</strong> Compétences.</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+    window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+</script>
+
+</body>
+</html>
