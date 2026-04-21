@@ -6,7 +6,7 @@
     <title>Révisions BTS SIO</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Style spécifique pour le bouton pause */
+        /* Style du bouton Pause YouTube */
         .btn-pause {
             background-color: #34495e;
             color: white;
@@ -15,12 +15,79 @@
             padding: 15px 25px;
             border-radius: 5px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 10px;
             display: block;
             transition: background 0.3s;
         }
         .btn-pause:hover {
             background-color: #2c3e50;
+        }
+
+        /* Style du bouton Conga */
+        .btn-conga {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            text-align: center;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .btn-conga:hover {
+            background-color: #e67e22;
+        }
+
+        /* Styles de la Pop-up (Modal) */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content-conga {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #aaa;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: black;
+        }
+
+        .conga-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .conga-title {
+            color: #f39c12;
+            font-weight: bold;
+            margin-top: 15px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -38,8 +105,53 @@
 
     <hr style="width:100%; border: 0; height: 1px; background: #ccc; margin: 10px 0;">
 
+    <button class="btn-conga" onclick="openConga()">💃 CONGA ?</button>
+
     <a href="https://youtu.be/o28852--bFE?si=OXPzY4DgfUSHpFJQ" target="_blank" class="btn-pause"> FAIRE UNE PAUSE</a>
 </div>
+
+<div id="modalConga" class="modal">
+    <div class="modal-content-conga">
+        <span class="close-btn" onclick="closeConga()">&times;</span>
+        <img src="conga.jpg" alt="Dancing Parrot" class="conga-image">
+        <div class="conga-title">💃 🕺</div>
+        
+        <audio id="congaMusic" loop>
+            <source src="choque.jpg" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+<script>
+    var music = document.getElementById('congaMusic');
+
+    function openConga() {
+        document.getElementById('modalConga').style.display = "block";
+        document.body.style.overflow = "hidden";
+        
+        // Calage à 3 minutes 30 secondes (210s)
+        music.currentTime = 210;
+        
+        // Lancement de la musique
+        music.play().catch(function(error) {
+            console.log("Le navigateur a bloqué la lecture auto. Cliquez sur l'image pour le son !");
+        });
+    }
+
+    function closeConga() {
+        document.getElementById('modalConga').style.display = "none";
+        document.body.style.overflow = "auto";
+        music.pause();
+    }
+
+    // Fermer si on clique en dehors du cadre blanc
+    window.onclick = function(event) {
+        var modal = document.getElementById('modalConga');
+        if (event.target == modal) {
+            closeConga();
+        }
+    }
+</script>
 
 </body>
 </html>
